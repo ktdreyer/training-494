@@ -3,6 +3,13 @@ set -exu
 
 # This script copies the steps at https://github.com/instructlab/training/blob/main/.github/workflows/e2e-nvidia-l40s-x4.yml
 # In order to reproduce the e2e failures we saw at https://github.com/instructlab/training/issues/494
+#
+# Requires tokens:
+#   https://huggingface.co/settings/tokens
+#   https://platform.openai.com/settings/organization/api-keys
+# This sanity-checks that you've set these variables before starting:
+echo $HF_TOKEN > /dev/null
+echo $OPENAI_API_KEY > /dev/null
 
 setup() {
     sudo dnf install -y gcc gcc-c++ make git python3.11 python3.11-devel
