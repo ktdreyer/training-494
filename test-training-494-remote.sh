@@ -69,7 +69,7 @@ e2e_test() {
     pushd $HOME/instructlab
     . venv/bin/activate
     popd
-    ./scripts/e2e-ci.sh -lp
+    ./scripts/e2e-ci.sh -lp | tee e2e.log
     log_files=$(find /tmp/ -name "training_params_and_metrics_global0.jsonl")
     phase_num=1;
     for log_file in $log_files; do
