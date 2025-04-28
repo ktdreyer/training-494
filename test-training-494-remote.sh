@@ -11,6 +11,8 @@ set -exu
 echo $HF_TOKEN > /dev/null
 echo $OPENAI_API_KEY > /dev/null
 
+export TMPDIR=/home/tmp
+
 setup() {
     sudo dnf install -y gcc gcc-c++ make git python3.11 python3.11-devel
 
