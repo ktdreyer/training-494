@@ -30,6 +30,8 @@ setup() {
     # popd
 }
 
+setup
+
 install_ilab() {
     pushd $HOME/instructlab
     export CUDA_HOME="/usr/local/cuda"
